@@ -31,6 +31,7 @@ server <- function(input, output) {
   output$story <- renderText({
     story()
   })
+  cat("This is a log.\n", file = stderr())
 }
 
 shinyApp(ui = ui, server = server)
